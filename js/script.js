@@ -35,7 +35,16 @@ let team_members = [
 // STAMPO IN console.LOG I SINGOLI OGGETTI DEL MIO ARRAY 
 for(let i=0; i<team_members.length; i++){
     console.log(team_members[i])
-    for(let j=0; j<team_members.length[i]; j++){
+
+    for(let j in team_members[i]){
+
         console.log((team_members[i])[j])
+
+        let member = document.createElement('li');
+
+        member.innerHTML+= (team_members[i])[j];
+        document.getElementById('team-members').appendChild(member);
     }
+
+    console.log(team_members[i].name);
 }
